@@ -1,0 +1,25 @@
+{
+  "name": "ws-chat-example",
+  "version": "1.0.0",
+  "description": "A chat example using WebSocket(websockets/ws)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisener/ws-chat-example.git"
+  },
+  "keywords": [
+    "websocket",
+    "ws",
+    "chat",
+    "example"
+  ],
+  "author": "Halil İbrahim Şener<hisener@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisener/ws-chat-example/issues"
+  },
+  "homepage": "https://github.com/hisener/ws-chat-example#readme"
+}
