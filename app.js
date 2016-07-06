@@ -2,15 +2,17 @@
 
 var http = require('http');
 var express = require('express');
-var WebSocketServer = require('ws').Server;
+var websocket = require(process.cwd() + '/websocket');
+var routes = require(process.cwd() + '/routes');
 
 var app = express();
 var development = app.get('env') === 'development';
 
 // Set the view engine
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(express.static(process.cwd() + '/public'));
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -31,5 +33,7 @@ app.use(function (err, req, res, next) {
 
 var server = http.createServer(app);
 server.listen(process.env.PORT || 3000, function () {
-  console.log('Server listening on ' + process.env.PORT || 3000);
+  console.log('Server listening on ' + (process.env.PORT || 3000));
+  
+  websocket(server);
 });

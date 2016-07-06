@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p= desc
+
+  div.row
+    div.col-sm-8
+      h3 Chat Logs
+    div.col-sm-4
+      h3 Users
+    div.col-sm-8#chatbox
+    div.col-sm-4#userList
+      div.user @robot
+  div.row.top5
+    div.input-group
+      input(type='text', class='form-control', placeholder='Username')
+      span.input-group-btn
+        button(class='btn btn-default', type='button') Login
+  hr
+  p
+    a(href='https://github.com/hisener/ws-chat-example' target='_blank') Github repository
