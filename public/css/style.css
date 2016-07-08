@@ -2,10 +2,11 @@ h1 {
   font-size: 36px;
 }
 
-#chatbox, #userList {
+#chatbox {
   border-color: #ddd;
   border-width: 1px;
   border-style: solid;
+  border-bottom: 0;
   height: 300px;
   overflow-y: auto;
 }
@@ -15,8 +16,4 @@ h1 {
 }
 #chatbox > div:nth-child(even) {
   background: #ffffff;
-}
-
-.top5 {
-  margin-top: 5px;
 }

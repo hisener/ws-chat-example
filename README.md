@@ -2,3 +2,6 @@
 
 Yet another WebSocket chat example using Node.js & Express.js with 'ws' package.
 
+TODO:
+
+  [-] User list.
