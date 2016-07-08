@@ -15,7 +15,7 @@ module.exports = (server) => {
       return false;
 
     for (let client of wss.clients) {
-      if (client.username == str)
+      if (client.username === str)
         return false;
     }
     return true;

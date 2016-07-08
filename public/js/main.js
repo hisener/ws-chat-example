@@ -43,7 +43,7 @@ function send() {
   
   client.send(JSON.stringify(message));
   textbox.value = '';
-};
+}
 
 button.onclick = send;
 
