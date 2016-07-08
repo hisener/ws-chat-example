@@ -8,12 +8,13 @@ client.onmessage = function(message) {
 
   if (message.data === 'loginSuccess') {
     button.innerHTML = 'Send';
-    textbox.placeholder = 'Message';
+    textbox.placeholder = 'Write message';
     textbox.parentElement.className += ' has-success';
     return;
 
   } else if (message.data === 'loginFailed') {
     textbox.parentElement.className += ' has-error';
+    textbox.placeholder = 'Username is already used by another user';
     return;
   }
 
@@ -26,6 +27,9 @@ client.onmessage = function(message) {
 };
 
 function send() {
+
+  if (! textbox.value)
+    return;
 
   var message = {
     type: 'message',
