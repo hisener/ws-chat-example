@@ -6,5 +6,5 @@ Yet another WebSocket chat example using Node.js & Express.js with 'ws' package.
 
 TODO:
 
-  [-] Message time
+  [+] Message time
   [-] User list

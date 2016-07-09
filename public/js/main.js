@@ -20,8 +20,12 @@ client.onmessage = function(message) {
 
   var chatbox = document.getElementById('chatbox');
   var div = document.createElement('div');
-  div.innerHTML = message.data.replace(/(@\w+)/ig, '<b>$1</b>');
-  
+  div.className = 'col-xs-12 nopadding';
+  div.innerHTML = '<span class="col-xs-11 nopadding">' +
+    message.data.replace(/(@\w+)/ig, '<b>$1</b>') +
+    '</span><span class="col-xs-1 text-right nopadding">' +
+    new Date().toTimeString().split(' ')[0] + '</span>';
+
   chatbox.appendChild(div);
   chatbox.scrollTop = chatbox.scrollHeight;
 };
@@ -35,12 +39,11 @@ function send() {
     type: 'message',
     data: textbox.value
   };
-  
 
   if (button.innerHTML === 'Login') {
     message.type = 'login';
   }
-  
+
   client.send(JSON.stringify(message));
   textbox.value = '';
 }

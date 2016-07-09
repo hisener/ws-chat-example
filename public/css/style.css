@@ -17,3 +17,7 @@ h1 {
 #chatbox > div:nth-child(even) {
   background: #ffffff;
 }
+
+.nopadding {
+  padding: 0 !important;
+}

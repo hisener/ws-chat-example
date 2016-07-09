@@ -1,11 +1,12 @@
 {
   "name": "ws-chat-example",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A chat example using WebSocket(websockets/ws)",
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=production node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "coverage": "istanbul cover ./app.js"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,8 @@
   "engines": {
     "node": "^6.3.0",
     "npm": "^3.10.5"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.4"
   }
 }

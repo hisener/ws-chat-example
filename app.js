@@ -34,6 +34,6 @@ app.use(function (err, req, res, next) {
 var server = http.createServer(app);
 server.listen(process.env.PORT || 3000, function () {
   console.log('Server listening on ' + (process.env.PORT || 3000));
-  
+
   websocket(server);
 });
