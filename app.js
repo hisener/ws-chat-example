@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
 })
 
 // error handler for both production and development
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
   res.status(err.status || 500)
   res.render('error', {
     path: process.cwd(),

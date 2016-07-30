@@ -3,10 +3,8 @@ h1 {
 }
 
 #chatbox {
-  border-color: #ddd;
-  border-width: 1px;
-  border-style: solid;
-  border-bottom: 0;
+  border: 1px solid #ddd;
+  border-bottom-width: 0;
   height: 300px;
   overflow-y: auto;
 }
